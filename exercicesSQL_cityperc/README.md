@@ -5,7 +5,7 @@ Ci-dessous les consignes d'un exercice que j'ai réalisé dans ce cadre, afin de
 
 
 
-**Your task is to determine the top 10 capital cities in Europe and the Americas by city_perc, a metric you'll calculate. city_perc is a percentage that calculates the "proper" population in a city as a percentage of the total population in the wider metro area, as follows:
+**Your task is to determine the top 10 capital cities in Europe and the Americas by city_perc, a metric you'll calculate. city_perc is a percentage that calculates the "proper" population in a city as a percentage of the total population in the wider metro area, as follows:**
 
 city_proper_pop / metroarea_pop * 100
 
