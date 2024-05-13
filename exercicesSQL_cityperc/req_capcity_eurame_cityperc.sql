@@ -1,4 +1,4 @@
--- Select fields from cities
+-- Selection des champs nécessaires depuis la table cities
 SELECT 
     name,
     country_code,
@@ -6,15 +6,17 @@ SELECT
     metroarea_pop,
     (city_proper_pop / metroarea_pop * 100) AS city_perc
 FROM cities
--- Use subquery to filter city name
+    
+-- Utilisation d'une sous-requête pour filtrer sur les villes des continents contenant les mots "Europe" et "Amérique"
 WHERE name IN (
     SELECT capital
     FROM countries
     WHERE continent LIKE '%Europe%'
         OR continent LIKE '%America%'
 )
--- Add filter condition such that metroarea_pop does not have null values
+-- Ajout d'une condition pour nettoyer le champ metroarea_pop des données nulles
 AND metroarea_pop IS NOT NULL
--- Sort and limit the result
+    
+-- Tri des résultats par ordre décroissant, et limitation des résultats à 10 enregistrements
 ORDER BY city_perc DESC
 LIMIT 10;
